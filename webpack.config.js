@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  entry: './src/index.ts',
+  entry: './src/events/events.ts',
   module: {
     rules: [
       {
