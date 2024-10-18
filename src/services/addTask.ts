@@ -1,17 +1,16 @@
-import { exclude, p, result, span, task } from '../utils/utils';
+import { result, task } from '../utils/utils';
 import { tarefa, TaskManager } from '../taskManager';
 
 export class AddTask {
   constructor(
-    public span: HTMLSpanElement,
-    public p: HTMLParagraphElement,
-    public exclude: HTMLButtonElement,
     public result: HTMLDivElement,
     public tarefa: TaskManager,
   ) {}
 
   add() {
-    console.log('cheguei aqui');
+    const span: HTMLSpanElement = document.createElement('span');
+    const exclude: HTMLButtonElement = document.createElement('button');
+    const p: HTMLParagraphElement = document.createElement('p');
     tarefa.taskList.push(task.value);
     span.className = 'span';
     exclude.innerHTML = 'excluir';
@@ -21,7 +20,8 @@ export class AddTask {
     span.appendChild(p);
     span.appendChild(exclude);
     result.appendChild(span);
+    console.log(tarefa.taskList);
   }
 }
 
-export const addTask = new AddTask(span, p, exclude, result, tarefa);
+export const addTask = new AddTask(result, tarefa);
