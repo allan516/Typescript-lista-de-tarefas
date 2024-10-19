@@ -1,12 +1,15 @@
-import { task } from './utils/utils';
 import { addTask } from './services/addTask';
+import { deleteTask } from './services/excludeTask';
 
 export class TaskManager {
-  name: string = task.value;
   taskList: string[] = [];
 
   adicionar() {
     addTask.add();
+  }
+
+  excluir() {
+    deleteTask.exclude();
   }
 }
 
