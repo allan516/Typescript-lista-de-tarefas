@@ -8,10 +8,11 @@ export class AddTask {
   ) {}
 
   add() {
-    const exclude: HTMLButtonElement = document.createElement('button');
     const span: HTMLSpanElement = document.createElement('span');
+    const exclude: HTMLButtonElement = document.createElement('button');
     const p: HTMLParagraphElement = document.createElement('p');
     tarefa.taskList.push(task.value);
+    p.className = 'paragraph'
     span.className = 'span';
     exclude.className = 'exclude';
     exclude.innerHTML = 'excluir';

@@ -50,7 +50,6 @@ section {
 }
 
 .showList .span p {
-  width: 100%;
   padding: 5px;
 }
 
@@ -64,4 +63,5 @@ button {
 .paragrafoVisivel {
   background: lightgray !important;
   opacity: 0.5;
+  text-decoration: line-through;
 }
