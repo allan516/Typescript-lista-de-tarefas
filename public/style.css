@@ -63,5 +63,8 @@ button {
 .paragrafoVisivel {
   background: lightgray !important;
   opacity: 0.5;
+}
+
+.paragrafoVisivel p {
   text-decoration: line-through;
 }

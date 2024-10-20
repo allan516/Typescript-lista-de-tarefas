@@ -10,7 +10,6 @@ button.addEventListener('click', (e) => {
 
 document.body.addEventListener('click', (e) => {
   const target = e.target as HTMLElement;
-  console.log(target);
   const spann = document.querySelector('.span') as HTMLSpanElement;
   const p = document.querySelector('.paragraph') as HTMLParagraphElement;
 
