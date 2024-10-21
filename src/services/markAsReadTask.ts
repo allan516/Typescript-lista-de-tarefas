@@ -1,6 +1,6 @@
 export class MarkAsReadTask {
 
-  markAsRead(arg: HTMLSpanElement, arg2: HTMLParagraphElement) {
+  markAsRead(arg: HTMLSpanElement) {
     if (!arg.classList.contains('paragrafoVisivel')) {
       arg.classList.add('paragrafoVisivel');
     } else {

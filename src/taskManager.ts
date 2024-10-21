@@ -13,8 +13,8 @@ export class TaskManager {
     deleteTask.exclude(spann);
   }
 
-  tarefaCompleta(span: HTMLSpanElement, p: HTMLParagraphElement) {
-    markAsReadTask.markAsRead(span, p);
+  tarefaCompleta(span: HTMLSpanElement) {
+    markAsReadTask.markAsRead(span);
   }
 }
 
