@@ -3,14 +3,14 @@ import { deleteTask } from './services/excludeTask';
 import { markAsReadTask } from './services/markAsReadTask';
 
 export class TaskManager {
-  taskList: string[] = [];
+  taskList: any[] = [];
 
   adicionar() {
     addTask.add();
   }
 
-  excluir(spann: HTMLSpanElement) {
-    deleteTask.exclude(spann);
+  excluir(target: HTMLSpanElement) {
+    deleteTask.exclude(target);
   }
 
   tarefaCompleta(span: HTMLSpanElement) {

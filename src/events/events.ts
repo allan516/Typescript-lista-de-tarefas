@@ -9,10 +9,12 @@ button.addEventListener('click', (e) => {
 });
 
 document.body.addEventListener('click', (e) => {
-  const target = e.target as HTMLElement;
-  const spann = document.querySelector('.span') as HTMLSpanElement;
+  const target: any = e.target;
 
-  if(target.classList.contains('exclude') && spann) tarefa.excluir(spann);
+  if(target.classList.contains('exclude')) {
+    const element = target.parentElement as HTMLSpanElement;
+    tarefa.excluir(element);
+  }
 
   if(target.classList.contains('paragraph')) {
       tarefa.tarefaCompleta(target);

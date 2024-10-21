@@ -1,8 +1,11 @@
+import { tarefa, TaskManager } from "../taskManager";
+
 export class DeleteTask {
-  exclude(spann: HTMLSpanElement) {
+  exclude(target: HTMLSpanElement) {
+          console.log(tarefa.taskList);
           window.confirm('Deseja excluir esta tarefa?') === true
-        ? spann.remove()
-        : spann;
+        ? target.remove()
+        : target;
   }
 }
 
