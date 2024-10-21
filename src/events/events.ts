@@ -14,7 +14,7 @@ document.body.addEventListener('click', (e) => {
 
   if(target.classList.contains('exclude') && spann) tarefa.excluir(spann);
 
-  if(target.classList.contains('span')) {
+  if(target.classList.contains('paragraph')) {
       tarefa.tarefaCompleta(target);
   }
 })

@@ -41,7 +41,6 @@ section {
 .showList > .span {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
   width: 400px;
   background-color: #80d7ff;
   margin: 1px;
@@ -50,21 +49,19 @@ section {
 }
 
 .showList .span p {
-  padding: 5px;
+  padding: 8px;
+  width: 100vw;
 }
 
 button {
   cursor: pointer;
-  margin-top: 5px;
+  margin: 5px 5px 0px 3px;
   height: 25px;
   font-weight: 500;
-}
+  }
 
 .paragrafoVisivel {
   background: lightgray !important;
   opacity: 0.5;
-}
-
-.paragrafoVisivel p {
   text-decoration: line-through;
 }
