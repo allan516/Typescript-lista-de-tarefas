@@ -61,7 +61,7 @@ button {
   }
 
 .paragrafoVisivel {
-  background: lightgray !important;
+  background: #6969697c !important;
   opacity: 0.5;
   text-decoration: line-through;
 }

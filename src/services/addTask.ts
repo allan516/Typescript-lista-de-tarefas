@@ -1,5 +1,4 @@
 import { result, task } from '../utils/utils';
-import { tarefa } from '../taskManager';
 
 export class AddTask {
   id: number = 0;
@@ -18,8 +17,6 @@ export class AddTask {
     span.appendChild(exclude);
     result.appendChild(span);
     this.id++;
-    tarefa.taskList.push({id: this.id, task: task.value});
-    console.log(tarefa.taskList[this.id]);
   }
 }
 
