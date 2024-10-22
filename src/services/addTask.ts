@@ -1,7 +1,6 @@
 import { result, task } from '../utils/utils';
 
 export class AddTask {
-  id: number = 0;
 
   add() {
     const span: HTMLSpanElement = document.createElement('span');
@@ -16,7 +15,6 @@ export class AddTask {
     span.appendChild(p);
     span.appendChild(exclude);
     result.appendChild(span);
-    this.id++;
   }
 }
 
