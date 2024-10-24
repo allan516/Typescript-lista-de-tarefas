@@ -1,4 +1,4 @@
-import { button, task } from '../utils/utils';
+import { button, task } from '../dom/domElements';
 import { tarefa } from '../taskManager';
 
 button.addEventListener('click', (e) => {

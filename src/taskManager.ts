@@ -4,7 +4,6 @@ import { deleteTask } from './services/excludeTask';
 import { markAsReadTask } from './services/markAsReadTask';
 
 export class TaskManager implements Task {
-
   adicionar() {
     addTask.add();
   }
