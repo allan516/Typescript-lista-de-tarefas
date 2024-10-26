@@ -2,7 +2,7 @@
 // import { deleteTask } from './services/excludeTask';
 // import { markAsReadTask } from './services/markAsReadTask';
 
-import { Task } from "./protocols/task";
+import { TaskProtocol } from "./protocols/taskManager-protocol";
 
 // export class TaskManager implements Task {
 //   adicionar() {
@@ -18,19 +18,15 @@ import { Task } from "./protocols/task";
 //   }
 // }
 
-export class TaskManager implements Task {
-  private _tasklist: HTMLElement[] = [];
+export class TaskManager {
+  private _tasklist: { [k: string]: TaskProtocol } = {};
 
-  set tasklist(task: HTMLElement) {
-    this._tasklist.push(task);
+  addCommand(command: string, element: TaskProtocol) {
+    this._tasklist[command] = element;
   }
 
-  get tasklist(): HTMLElement[] {
-    return this._tasklist;
-  }
-
-  makeYourChoice(arg: number) {
-    this._tasklist[arg];
+  executeCommand(command: string): void {
+    this._tasklist[command].execute();
   }
 }
 

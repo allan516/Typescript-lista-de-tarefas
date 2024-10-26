@@ -1,8 +1,9 @@
 import { domElements, task } from '../dom/domElements';
+import { TaskProtocol } from '../protocols/taskManager-protocol';
 
-export class AddTask {
+export class AddTask implements TaskProtocol {
 
-  add() {
+  execute() {
     if(task.value === '') return;
     domElements.create();
   }
