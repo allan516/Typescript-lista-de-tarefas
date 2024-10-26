@@ -13,18 +13,21 @@ button.addEventListener('click', (e) => {
     task.value = '';
 });
 
-// document.body.addEventListener('click', (e) => {
-//   const target: any = e.target;
+document.body.addEventListener('click', (e) => {
+  const target: any = e.target;
 
-//   if(target.classList.contains('exclude')) {
-//     const element = target.parentElement as HTMLSpanElement;
-//     tarefa.excluir(element);
-//   }
+  if(target.classList.contains('exclude')) {
+    const element = target.parentElement as HTMLSpanElement;
+    const exclude =  new DeleteTask(element);
+    tarefa.addCommand('exclude', exclude);
+    tarefa.executeCommand('exclude');
+  }
 
-//   if(target.classList.contains('paragraph')) {
-//       tarefa.tarefaCompleta(target);
-//   }
-// })
-
-
+  if(target.classList.contains('paragraph')) {
+    const element = target as HTMLElement;
+    const markAsRead = new MarkAsReadTask(element);
+      tarefa.addCommand('markAsRead', markAsRead);
+      tarefa.executeCommand('markAsRead');
+  }
+});
 

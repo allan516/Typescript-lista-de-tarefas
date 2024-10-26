@@ -1,13 +1,15 @@
-export class MarkAsReadTask {
+import { TaskProtocol } from "../protocols/taskManager-protocol";
 
-  markAsRead(arg: HTMLElement) {
-    if (!arg.classList.contains('paragrafoVisivel')) {
-      arg.classList.add('paragrafoVisivel');
+export class MarkAsReadTask implements TaskProtocol{
+
+  constructor(private arg: HTMLElement) {}
+
+  execute() {
+    if (!this.arg.classList.contains('paragrafoVisivel')) {
+      this.arg.classList.add('paragrafoVisivel');
     } else {
-      arg.classList.remove('paragrafoVisivel');
+      this.arg.classList.remove('paragrafoVisivel');
     }
   }
 }
 
-
-export const markAsReadTask = new MarkAsReadTask();

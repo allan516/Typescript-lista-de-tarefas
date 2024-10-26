@@ -1,9 +1,10 @@
-export class DeleteTask {
-  exclude(target: HTMLSpanElement) {
+import { TaskProtocol } from "../protocols/taskManager-protocol";
+
+export class DeleteTask implements TaskProtocol{
+  constructor(private target: HTMLElement) {}
+  execute() {
       window.confirm('Deseja excluir esta tarefa?') === true
-    ? target.remove()
-    : target;
+    ? this.target.remove()
+    : this.target;
   }
 }
-
-export const deleteTask = new DeleteTask();
