@@ -1,20 +1,19 @@
-import { button, task } from '../dom/domElements';
-import { TaskProtocol } from '../protocols/taskManager-protocol';
-import { addTask, AddTask } from '../services/addTask';
+import { task } from '../dom/domElements';
+import { addTask } from '../services/addTask';
 import { DeleteTask } from '../services/excludeTask';
 import { MarkAsReadTask } from '../services/markAsReadTask';
 import { tarefa } from '../taskManager';
 
-button.addEventListener('click', (e) => {
+document.body.addEventListener('click', (e) => {
+  const target: any = e.target;
+
+  if(target.classList.contains('button')) {
     e.preventDefault();
     tarefa.addCommand('add', addTask);
     tarefa.executeCommand('add');
     task.focus();
     task.value = '';
-});
-
-document.body.addEventListener('click', (e) => {
-  const target: any = e.target;
+  }
 
   if(target.classList.contains('exclude')) {
     const element = target.parentElement as HTMLSpanElement;
