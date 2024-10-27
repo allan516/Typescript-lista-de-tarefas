@@ -1,4 +1,5 @@
 import { task } from '../dom/domElements';
+import { EditTask } from '../services/editTask';
 import { addTask } from '../services/addTask';
 import { DeleteTask } from '../services/excludeTask';
 import { MarkAsReadTask } from '../services/markAsReadTask';
@@ -33,8 +34,12 @@ document.body.addEventListener('click', (e) => {
 document.body.addEventListener('dblclick', (e) => {
   e.preventDefault();
   const target: any = e.target;
-  const msg = window.prompt('Alterar a Tarefa: ') as string;
   if(target.classList.contains('paragraph')) {
-    target.innerHTML = msg
+    const element = target as HTMLElement;
+    const edit = new EditTask(element);
+    tarefa.addCommand('edit', edit);
+    tarefa.executeCommand('edit');
+    task.focus();
+    task.value = '';
   }
 });
