@@ -30,3 +30,11 @@ document.body.addEventListener('click', (e) => {
   }
 });
 
+document.body.addEventListener('dblclick', (e) => {
+  e.preventDefault();
+  const target: any = e.target;
+  const msg = window.prompt('Alterar a Tarefa: ') as string;
+  if(target.classList.contains('paragraph')) {
+    target.innerHTML = msg
+  }
+});
