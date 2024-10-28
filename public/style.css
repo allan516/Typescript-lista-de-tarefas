@@ -35,6 +35,8 @@ section {
 
 .showList {
   position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
   padding: 10px;
 }
 
@@ -58,6 +60,13 @@ button {
   margin: 5px 5px 0px 3px;
   height: 25px;
   font-weight: 500;
+  }
+
+  .clearAllButton {
+    /* display: none; */
+    margin: 5px auto;
+    float: right;
+    transition-duration: 2s;
   }
 
 .paragrafoVisivel {

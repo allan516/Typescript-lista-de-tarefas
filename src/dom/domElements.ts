@@ -15,7 +15,7 @@ export class DomElements {
     span.appendChild(p);
     span.appendChild(exclude);
     result.appendChild(span);
-  }
+ }
 }
 
 export const domElements = new DomElements();
