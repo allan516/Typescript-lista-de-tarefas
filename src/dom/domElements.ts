@@ -1,5 +1,6 @@
 export const task = document.getElementById('task') as HTMLInputElement;
 export const result = document.getElementById('result') as HTMLParagraphElement;
+export const buttonClear = document.querySelector('.clearAllButton') as HTMLButtonElement;
 
 export class DomElements {
 

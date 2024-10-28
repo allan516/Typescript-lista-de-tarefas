@@ -25,9 +25,9 @@ document.body.addEventListener('click', (e) => {
   if(target.classList.contains('exclude')) {
     const element = target.parentElement as HTMLSpanElement;
     const exclude =  new DeleteTask(element);
+    array.pop();
     tarefa.addCommand('exclude', exclude);
     tarefa.executeCommand('exclude');
-    array.pop();
   }
 
   if(target.classList.contains('paragraph')) {
