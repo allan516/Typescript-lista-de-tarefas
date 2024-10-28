@@ -4,6 +4,10 @@ import { addTask } from '../services/addTask';
 import { DeleteTask } from '../services/excludeTask';
 import { MarkAsReadTask } from '../services/markAsReadTask';
 import { tarefa } from '../taskManager';
+import { ClearAll } from '../services/clearAll';
+
+export let array: number[] = [];
+let index: number = 0;
 
 document.body.addEventListener('click', (e) => {
   const target: any = e.target;
@@ -14,6 +18,8 @@ document.body.addEventListener('click', (e) => {
     tarefa.executeCommand('add');
     task.focus();
     task.value = '';
+    index++;
+    array.push(index);
   }
 
   if(target.classList.contains('exclude')) {
@@ -21,6 +27,7 @@ document.body.addEventListener('click', (e) => {
     const exclude =  new DeleteTask(element);
     tarefa.addCommand('exclude', exclude);
     tarefa.executeCommand('exclude');
+    array.pop();
   }
 
   if(target.classList.contains('paragraph')) {
@@ -28,6 +35,13 @@ document.body.addEventListener('click', (e) => {
     const markAsRead = new MarkAsReadTask(element);
       tarefa.addCommand('markAsRead', markAsRead);
       tarefa.executeCommand('markAsRead');
+  }
+
+  if(target.classList.contains('clearAllButton')) {
+    const clearAll = new ClearAll(target);
+    tarefa.addCommand('clearAll', clearAll);
+    tarefa.executeCommand('clearAll');
+    array = [];
   }
 });
 

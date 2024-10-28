@@ -63,10 +63,9 @@ button {
   }
 
   .clearAllButton {
-    /* display: none; */
-    margin: 5px auto;
-    float: right;
-    transition-duration: 2s;
+    visibility: hidden;
+    margin: 10px auto;
+    width: 120px;
   }
 
 .paragrafoVisivel {
