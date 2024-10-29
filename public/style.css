@@ -62,14 +62,14 @@ button {
   font-weight: 500;
   }
 
-  .clearAllButton {
-    display: grid;
-    order: 99;
-    visibility: hidden;
-    margin: 10px auto;
-    width: 120px;
-    transition: all .5s;
-  }
+.clearAllButton {
+  display: grid;
+  order: 99;
+  visibility: hidden;
+  margin: 10px auto;
+  width: 120px;
+  transition: all .5s;
+}
 
 .paragrafoVisivel {
   background: #6969694b !important;
